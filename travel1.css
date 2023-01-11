@@ -8,10 +8,16 @@ nav img{
 
 }
 .jumbotron h1{
-    color:#806c00
+    color: white;
 }
 .jumbotron p:first-of-type{
-    color:#7d6b04
+    color: white;
+    
+}
+.jumbotron button:hover{
+    transform: scale(1.1);
+    margin-left:8px;
+    margin-right: 8px;
 }
 .card{
     height:100%;
@@ -25,10 +31,7 @@ nav img{
     transform:scale(1.1)
 }
 
-/* .height img{
-    height:400px;
-    object-fit: cover;
-} */
+
 .strike{
     text-decoration: line-through;
 }
@@ -38,16 +41,25 @@ nav img{
     }
   }
 
-.feed img{
-height:15px;
-width:15px;
-border-radius:50%;
 
-}
 .feed i{
-    color:yellow;
+    color:rgb(95, 90, 90);
 }
 footer{
     font-size: 20px;
     
+}
+h2{
+    color:rgb(69, 8, 8);
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top:10px;
+}
+p{
+    font-family:cursive;
+}
+h5{
+    font-family:monospace;
+    font-size: 16px;
 }

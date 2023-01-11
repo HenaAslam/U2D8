@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="travel1.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-white" >
+    <nav class="navbar navbar-expand-md navbar-light bg-light" >
         <a class="navbar-brand" href="#"><img src="./big_4860a49d3f1e09de.png" alt="" class=" h-10 h-md-10 "></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -34,26 +34,55 @@
               </li>
              
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
+                <a class="nav-link" href="#contact">About us</a>
               </li>
             
           </ul>
         </div>
       </nav>
      
-    <div class="jumbotron ">
+    <div class="jumbotron " style="background-image:url('https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1253&q=80');">
         <h1 class="display-4 font-italic font-weight-bold ">Fernweh Travels</h1>
         <p class="lead font-italic">We plan, You pack</p>
-        <hr class="my-4">
-        <button type="button" class="btn btn-outline-success"><i class="bi bi-calendar-date-fill pr-1"></i>Make an appointment</button>
-        <button type="button" class="btn btn-outline-success"><i class="bi bi-envelope-at pr-1"></i>Contact us</button>
+        
+        
+        <button type="button" class="btn btn-outline-light"><i class="bi bi-calendar-date-fill pr-1"></i>Make an appointment</button>
+        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+           Contact us
+          </button>
+          <button class="btn btn-outline-light" onclick="deletecards()">Delete all cards</button>
+          <button class="btn btn-outline-light" onclick=" hotbadge()">Hot badges</button>
+          
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Have a question? Contact us!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <input type="textarea" placeholder="write your message" style="width:90%; height:70px;" class="mb-3">
+                  <br>
+                  <input type="email" placeholder="your email">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
         
     
 </div>
-<div class="text-center"> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#first">Toggle</button></div>
-    <div class="container "  id="first" class="collapse show">
+<div class="text-center mb-2"> <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#first">Toggle</button></div>
+    <div class="container border "  id="first" class="collapse show" style="background-color:#EAE0DA">
 
-        <h2 id="deal">Deal of the week</h2>
+        <h2 id="deal" class="mt-2">Deal of the week</h2>
        
         <div class="row d-flex  justify-content-lg-around ">
             <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
@@ -114,12 +143,15 @@
             </div>
         </div>
       </div>
-      <div class="text-center"> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#second">Toggle</button></div>
-      <div class="container shadow-lg p-3 mb-5 bg-white rounded " id="second" class="collapse show">
+      <div class="text-center mb-3 mt-3"> <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#second">Toggle</button></div>
+    
+      <div class="container shadow-lg p-3 mb-5 bg-white rounded " id="second" class="collapse show" style="background-color:#A0C3D2 !important">
         <h2 id="summer">Welcome Summer</h2>
-        <div class="row d-flex  justify-content-lg-around ">
+      
+        <div class="row d-flex  justify-content-lg-around "   >
             <div class="col-6 col-sm-6 col-md-4 col-lg-2 mt-2 mb-5">
                 <div class="card" >
+                   
                     <img src="https://static.toiimg.com/thumb/msid-93874762,width-748,height-499,resizemode=4,imgsize-259948/Interesting-travel-facts-that-make-Kerala-unique.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Kerala, India</h5>
@@ -170,144 +202,179 @@
         </div>
       </div>
 
-      <div class="text-center"> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#third">Toggle</button></div>
-      <div class="container hidden-mobile" id="third" class="collapse show">
+      <div class="text-center mb-3 mt-3"> <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#third">Toggle</button></div>
+      <div class="container hidden-mobile border" id="third" class="collapse show" style="background-color:#FFF6BD">
         <h2 id="day">Deal of the day</h2>
         <div class="row d-flex  justify-content-lg-around ">
             <div class="col-8 col-sm-8 col-md-8 col-lg-8 mt-2 mb-5">
                 <div class="card" >
                     <img style="object-fit: cover; height:100%"src="https://media.istockphoto.com/id/1336449613/photo/paris-aerial-panorama-with-river-seine-and-eiffel-tower-france-romantic-summer-holidays.jpg?s=612x612&w=0&k=20&c=oSwvYYOETXB7RCIWLIbQIHUq12by7De2TpQ6T49xFxE=" alt="...">
-                    <div class="card-body">
-                     
-                    </div>
+                  
                   </div>
             </div>
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 mt-2 mb-5">
                 <div class="col-4"><h5>Paris, France</h5><span>15/01/23 - 20/01/23</span><span class="d-block"><strong>$700</strong></span>
-                    <span class="strike">$850</span></div>
+                    <span class="strike">$850</span> </div>
+                <div><blockquote>Paris is one of the most beautiful cities in the world. It is known worldwide for the Louvre Museum, Notre-Dame cathedral, and the Eiffel tower. It has a reputation of being a romantic and cultural city. The city is also known for its high-quality gastronomy and the terraces of its cafés.</blockquote></div>
             </div>
         </div>
         </div>
-        <div class="text-center"> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#four">Toggle</button></div>
-        <div class="container " id="four" class="collapse show">
+        <div class="text-center mb-3 mt-3"> <button class="btn btn-outline-dark btn-sm" type="button" data-toggle="collapse" data-target="#four">Toggle</button></div>
+        <div class="container border" id="four" class="collapse show" style="background-color:#BCE29E">
             <h2 id="min">Last Minute</h2>
             <div class="row d-flex  justify-content-lg-around ">
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://static.toiimg.com/thumb/msid-93874762,width-748,height-499,resizemode=4,imgsize-259948/Interesting-travel-facts-that-make-Kerala-unique.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Kerala, India</h5>
-                        </div>
+                      
                       </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://www.wanderingowl.com/wp-content/uploads/2020/04/blog_images_photo_northern_lights_norway.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Tromsø,Norway</h5>
-                        </div>
+                       
                       </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://media.timeout.com/images/105240195/image.jpg" class="card-img-top" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Bali, Indonesia</h5>
-                        </div>
+                 
                       </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/81/30/3f/caption.jpg?w=700&h=-1&s=1&cx=1846&cy=1833&chk=v1_6ae0a81ae3361e988707" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Santorini, Greece</h5>
-                        </div>
+                       
                       </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://media.tacdn.com/media/attractions-splice-spp-720x480/0c/0b/44/52.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Vienna,Austria</h5>
-                        </div>
+                        
                       </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://www.travelandleisure.com/thmb/SPUPzO88ZXq6P4Sm4mC5Xuinoik=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/eiffel-tower-paris-france-EIFFEL0217-6ccc3553e98946f18c893018d5b42bde.jpg" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Paris, France</h5>
-                        </div>
+                      
                       </div>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-2 mb-5">
                     <div class="card" >
                         <img src="https://cdn2.veltra.com/ptr/20191205070047_1738415262_13350_0.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title mt-0 mb-0 pt-0 pb-0">Venice, Italy</h5>
-                        </div>
+                       
                       </div>
                 </div>
             </div>
           </div>
-          <div class="container feed mb-4 ">
-            <h2 id="feedback" class="mb-3">Happy customers</h2>
-            <div class="row">
-                <div class="col-4">
-                    <div class="card" >
-             
-                        <h6>Lorem ipsum.</h6>
-                        <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-                        <div class="card-body">
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aut.</p>
-                        </div>
-                      </div>
+          
+
+          <div class="container feed mb-4 border mt-3 " style="background-color:#DFD3C3">
+            <section>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-10 col-xl-8 text-center">
+                    <h2 id="feedback" class="mb-4">Happy customers</h2>
+                  
+                  </div>
                 </div>
-                <div class="col-4">
-                    <div class="card" >
-                        <h6>Lorem ipsum.</h6>
-                        <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
-                        <div class="card-body">
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, minima.</p>
-                        </div>
-                      </div>
+              
+                <div class="row text-center">
+                  <div class="col-md-4 mb-5 mb-md-0">
+                    <div class="d-flex justify-content-center mb-4">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                    </div>
+                    <h5 class="mb-3">Maria Smantha</h5>
+                    <p class="px-xl-3">
+                     The best travels!
+                    </p>
+                    <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                    
+                  </div>
+                  <div class="col-md-4 mb-5 mb-md-0">
+                    <div class="d-flex justify-content-center mb-4">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                    </div>
+                    <h5 class="mb-3">Lisa Cudrow</h5>
+                   
+                    <p class="px-xl-3">
+                 I would recommend!
+                    </p>
+                    <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                    
+                  </div>
+                  <div class="col-md-4 mb-0">
+                    <div class="d-flex justify-content-center mb-4">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                    </div>
+                    <h5 class="mb-3">John Smith</h5>
+                    
+                    <p class="px-xl-3">
+                   Best service!
+                   
+                    </p>
+                    <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+               
+                  </div>
                 </div>
-                <div class="col-4">
-                    <div class="card" >
-             
-                        <h6>Lorem ipsum.</h6>
-                        <span><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-                        <div class="card-body">
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aut.</p>
-                        </div>
-                      </div>
-                </div>
-            </div>
+              </section>
+            
           </div>
-    <footer class=" mt-4 mb-4" id="contact" >
+          <div class="count text-center"><p>Number of Destinations-</p></div>
+    <footer class=" mt-4  bg-dark" id="contact" >
         <div class="row ">
-            <div class="col-6 d-flex justify-content-around">
+            <div class="col-6 d-flex justify-content-around text-white pt-2 pb-2">
                 
-                    <a href="#">About us</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Careers</a>
+                    <a href="#" class="text-white">About us</a>
+                    <a href="#" class="text-white">Blog</a>
+                    <a href="#" class="text-white">Careers</a>
                 
             </div>
-            <div class="col-6 d-flex justify-content-around">
-                <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <div class="col-6 d-flex justify-content-around text-white pt-2 pb-2">
+                <a href="#" class="text-white"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href="#" class="text-white"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#" class="text-white"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="#" class="text-white"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#" class="text-white"><ion-icon name="logo-instagram"></ion-icon></a>
             </div>
         </div>
     </footer>
     <script>
         function counter(){
             let cards=document.querySelectorAll('.card')
-            console.log(cards.length)
+          
+            let place=document.querySelector('.count p')
+            place.innerHTML+=cards.length
         }
         counter();
+     function hotbadge(){
+        let sections=document.querySelectorAll('#second .card')
+        let imgNodes=document.querySelector('#second .card img')
+        console.log(imgNodes)
+        for(let i=0;i<sections.length;i++){
+            let imgNode=imgNodes[i];
+            
+            let section=sections[i];
+          
+            section.classList.add('position-relative')
+            let badge=document.createElement('span')
+            badge.classList.add('position-absolute')
+             badge.classList.add('badge')
+             badge.classList.add('badge-danger')
+            badge.innerText="HOT"
+            
+            section.appendChild(badge)
+        }
+     }
+    function deletecards(){
+        let cards=document.querySelectorAll('.card')
+        for(i=0;i<cards.length;i++){
+           // console.log(cards[i])
+            cards[i].remove()
+        }
+    }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
