@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+nav img{
+    height:23px !important;
+    object-fit: fill;
+
+}
+.jumbotron h1{
+    color:#806c00
+}
+.jumbotron p:first-of-type{
+    color:#7d6b04
+}
+.card{
+    height:100%;
+}
+.card img{
+    height:200px;
+    object-fit: cover;
+    transition: transform 300;
+}
+.card img:hover{
+    transform:scale(1.1)
+}
+
+/* .height img{
+    height:400px;
+    object-fit: cover;
+} */
+.strike{
+    text-decoration: line-through;
+}
+@media (max-width: 576px) {
+    .hidden-mobile {
+      display: none;
+    }
+  }
+
+.feed img{
+height:15px;
+width:15px;
+border-radius:50%;
+
+}
+.feed i{
+    color:yellow;
+}
+footer{
+    font-size: 20px;
+    
+}
